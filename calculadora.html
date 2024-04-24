@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,6 +40,9 @@
         <input type="number" id="num1" placeholder="Digite o primeiro número">
         <input type="number" id="num2" placeholder="Digite o segundo número">
         <button onclick="soma()">Somar</button>
+        <button onclick="subtracao()">Subtrair</button>
+        <button onclick="multiplicacao()">Multiplicar</button>
+        <button onclick="divisao()">Dividir</button>
         <div id="result"></div>
     </div>
 
@@ -50,6 +52,31 @@
             var num2 = parseFloat(document.getElementById('num2').value);
             var result = num1 + num2;
             document.getElementById('result').innerText = 'Resultado: ' + result;
+        }
+
+        function subtracao() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 - num2;
+            document.getElementById('result').innerText = 'Resultado: ' + result;
+        }
+
+        function multiplicacao() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 * num2;
+            document.getElementById('result').innerText = 'Resultado: ' + result;
+        }
+
+        function divisao() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            if (num2 !== 0) {
+                var result = num1 / num2;
+                document.getElementById('result').innerText = 'Resultado: ' + result;
+            } else {
+                document.getElementById('result').innerText = 'Não é possível dividir por zero';
+            }
         }
     </script>
 </body>
